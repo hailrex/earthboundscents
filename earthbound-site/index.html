@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Earthbound • Natural Luxury Cologne</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d4af37;
+      --black: #000;
+      --white: #fff;
+      --gray-dark: #111;
+      --transition: all 0.6s ease;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      height: 100%; overflow-y: scroll;
+    }
+    body {
+      font-family: 'Playfair Display', serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      position: relative;
+    }
+    /* Fixed Logo */
+    .fixed-logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      z-index: 999;
+    }
+    section {
+      scroll-snap-align: start;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 { font-size: 4rem; letter-spacing: 0.2em; color: var(--gold); margin: 1rem 0; }
+    h2 { font-size: 3rem; color: var(--gold); margin-bottom: 1rem; }
+    p { font-size: 1.2rem; max-width: 700px; margin-bottom: 1.5rem; }
+    .section-dark { background: var(--gray-dark); }
+    /* Hero */
+    .hero {
+      background: url('hero-bg.jpg') center/cover no-repeat fixed;
+      color: var(--gold);
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 2rem;
+    }
+    .hero img { width: 140px; margin-bottom: 1rem; }
+    .btn { display: inline-block; padding: 0.75rem 2rem; border: 2px solid var(--gold); color: var(--gold); text-transform: uppercase; text-decoration: none; font-weight: bold; transition: var(--transition); }
+    .btn:hover { background: var(--gold); color: var(--black); }
+    /* Carousel */
+    .carousel { display: flex; align-items: center; }
+    .carousel-track { overflow: hidden; width: 300px; }
+    .carousel-track-inner { display: flex; transition: var(--transition); }
+    .carousel-item { min-width: 280px; margin: 0 10px; background: var(--black); border: 2px solid var(--gold); border-radius: 12px; overflow: hidden; }
+    .carousel-item img { width: 100%; height: 180px; object-fit: cover; }
+    .carousel-item p { padding: 1rem; color: var(--gold); font-size: 1.1rem; }
+    .arrow { background: none; border: 2px solid var(--gold); color: var(--gold); font-size: 1.5rem; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; margin: 0 10px; transition: var(--transition); }
+    .arrow:hover { background: var(--gold); color: var(--black); }
+    /* Image grid */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 1rem; width: 100%; max-width: 1000px; margin-top: 2rem; }
+    .features-grid img { width: 100%; border-radius: 8px; }
+    /* Form */
+    form { display: flex; flex-direction: column; align-items: stretch; gap: 1rem; width: 100%; max-width: 500px; margin-top: 1rem; }
+    form label { text-align: left; font-size: 1rem; }
+    form input, form textarea, form select { padding: 0.75rem; border: 1px solid #333; background: var(--black); color: var(--white); font-size: 1rem; border-radius: 4px; }
+    form textarea { resize: vertical; height: 100px; }
+    form button { padding: 0.75rem 2rem; background: var(--gold); color: var(--black); border: none; text-transform: uppercase; font-weight: bold; cursor: pointer; transition: var(--transition); }
+    form button:hover { background: #b89f2f; }
+  </style>
+</head>
+<body>
+  <!-- Fixed Logo -->
+  <img class="fixed-logo" src="logo.png" alt="Earthbound Logo" />
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="logo.png" alt="Earthbound Logo" />
+    <h1>EARTHBOUND</h1>
+    <p>Pure. Powerful. Planet-friendly. Launching Soon.</p>
+    <a href="#mission" class="btn">Our Mission</a>
+  </section>
+
+  <!-- Mission -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>Redefining luxury by crafting premium fragrances from the finest natural essential oils and absolutes—no harmful synthetics, ever.</p>
+    <a href="#why" class="btn">Learn Why</a>
+  </section>
+
+  <!-- Why Earthbound Carousel -->
+  <section id="why" class="section-dark">
+    <h2>Why Earthbound?</h2>
+    <p>Unlike other brands that just say “smells great” or “long-lasting,” Earthbound delivers a truly evolving, multi-dimensional scent backed by sustainable, pure ingredients.</p>
+    <div class="carousel">
+      <button class="arrow prev">&#10094;</button>
+      <div class="carousel-track">
+        <div class="carousel-track-inner">
+          <div class="carousel-item">
+            <img src="images/unlike.jpg" alt="Unlike Other Brands" />
+            <p>Unlike Other Brands</p>
+          </div>
+          <div class="carousel-item">
+            <img src="images/smell-long.jpg" alt="Smells Great & Long-Lasting" />
+            <p>Smells Great & Long-Lasting</p>
+          </div>
+          <div class="carousel-item">
+            <img src="images/no-chem.jpg" alt="No Chemicals" />
+            <p>No Chemicals</p>
+          </div>
+          <div class="carousel-item">
+            <img src="images/sustainable.jpg" alt="Sustainably Made" />
+            <p>Sustainably Made</p>
+          </div>
+          <div class="carousel-item">
+            <img src="images/all-natural.jpg" alt="All Natural" />
+            <p>All Natural</p>
+          </div>
+        </div>
+      </div>
+      <button class="arrow next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Features with Images -->
+  <section>
+    <h2>Key Benefits</n2>
+    <p>Experience a long-lasting, evolving scent without compromise. Here's why Earthbound stands apart:</p>
+    <div class="features-grid">
+      <div><img src="images/lasting.jpg" alt="Long-Lasting Scent" /></div>
+      <div><img src="images/nontoxic.jpg" alt="Non-Toxic Formula" /></div>
+      <div><img src="images/artisan.jpg" alt="Artisan Small Batches" /></div>
+    </div>
+  </section>
+
+  <!-- Feedback Form -->
+  <section class="section-dark">
+    <h2>Your Feedback Matters</h2>
+    <p>Help us perfect Earthbound—answer a few quick questions and join our launch insiders.</p>
+    <form action="YOUR_MAILER_ENDPOINT" method="POST">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="harm">Do you care about harmful chemicals in colognes?</label>
+      <select id="harm" name="harm">
+        <option>Yes, very much</option>
+        <option>Somewhat</option>
+        <option>No, not concerned</option>
+      </select>
+
+      <label for="scents">What kind of scents do you prefer?</label>
+      <textarea id="scents" name="scents" placeholder="Fresh, woody, spicy…"></textarea>
+
+      <label for="notes">Which fragrance notes excite you most?</label>
+      <input type="text" id="notes" name="notes" placeholder="Vanilla, citrus, tobacco…" />
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <script>
+    // Carousel logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.carousel-track-inner');
+      const items = Array.from(track.children);
+      const prev = document.querySelector('.prev');
+      const next = document.querySelector('.next');
+      const width = items[0].getBoundingClientRect().width + 20;
+      let idx = 0;
+      const update = () => track.style.transform = `translateX(-${idx * width}px)`;
+      prev.onclick = () => { idx = (idx - 1 + items.length) % items.length; update(); };
+      next.onclick = () => { idx = (idx + 1) % items.length; update(); };
+      // Image fallback
+      document.querySelectorAll('img').forEach(img => {
+        img.onerror = () => img.src = 'images/placeholder.jpg';
+      });
+    });
+  </script>
+</body>
+</html>
